@@ -17,7 +17,7 @@ const findOrCreate = require("mongoose-findorcreate");
 const { redirect } = require("express/lib/response");
 
 const uri = process.env.MONGO_URI;
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 let userDetails = {};
 
 // using config vars to handle multiple environments for now
@@ -25,7 +25,7 @@ let URL = process.env.URL;
 
 if (process.env.NODE_ENV !== "production") {
   console.log("not prod");
-  URL = "http://localhost:3001";
+  URL = "mongodb+srv://nt4c1:*****@cluster0.b4snlnm.mongodb.net/test";
 }
 
 //config session for express
